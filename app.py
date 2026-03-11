@@ -1,9 +1,9 @@
 from flask import Flask, render_template, request
 import requests
-
+import os
 app = Flask(__name__)
+API_KEY=os.environ.get("API_KEY")
 
-API_KEY = "0970fb81e6b11977abdb6dba107de85e"
 
 @app.route("/", methods=["GET","POST"])
 def home():
